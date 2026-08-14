@@ -1,7 +1,7 @@
 # Variables in Java – Mastery Module
 
 ## 🎯 Objective
-Understand the **complete variable landscape** in Java – from primitive bits to memory footprints, from basic declarations to JVM‑level optimisations. By the end of this module, you will write **type‑safe, memory‑conscious, and performant** code.
+Understand the **complete variable landscape** in Java – from primitive bits to memory footprints, from basic declarations to JVM‑level optimisations. By the end of this module, I can  write **type‑safe, memory‑conscious, and performant** code.
 
 ---
 
