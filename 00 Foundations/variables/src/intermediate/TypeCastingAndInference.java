@@ -1,4 +1,4 @@
-package src.TypeCastingAndInference;
+package TypeCastingAndInference;
 public class TypeCastingAndInference {
     
 
