@@ -1,39 +1,37 @@
 # Conditionals in Java – Clean Code Mastery
 
 ## 🎯 Objective
-Conditionals are the **decision-makers** in your code. Most bugs come from poorly structured conditionals. This  teaches how to write conditionals that are **clear, maintainable, and self-documenting**.
+Conditionals are the **decision-makers** in your code. Most bugs come from poorly structured conditionals. This  teaches howto write conditionals that are **clear, maintainable, and self-documenting**.
 
-## 📖 Theory: The Clean Code Philosophy
+## 📂 Structure (One Concept Per File)
 
-### 1. `if-else` (The Workhorse)
-- **Rule**: Keep it shallow. Deep nesting is a code smell.
-- **Rule**: Use **Guard Clauses** (early `return`) to flatten `if-else`.
-- **Rule**: Always put the **happy path** first. Handle edge cases early.
+| File | Teaches |
+| :--- | :--- |
+| `IfElseBasics.java` | `if`, `if-else`, `if-else-if` chains (flat) |
+| `SwitchBasics.java` | Traditional `switch` with `break` |
+| `SwitchFallthrough.java` | Fall-through behavior (when it's useful, when it's dangerous) |
+| `GuardClausesIntro.java` | Using early `return` to flatten nested `if-else` |
+| `SwitchExpressions.java` | Modern `switch` with `->` and `yield` |
+| `TernaryOperator.java` | When to use `? :` and when to avoid it |
+| `GuardClausesDeep.java` | Advanced guard clause patterns |
+| `EnumsWithBehavior.java` | Replacing conditionals with enum methods |
+| `PatternMatching.java` | Pattern matching with `switch` (Java 21+) |
+| `GuardedPatterns.java` | `when` clauses in pattern matching |
+| `SealedHierarchy.java` | Exhaustive switches with sealed classes |
+| `BooleanBlindness.java` | Why boolean params are evil (and what to use instead) |
+| `TableswitchVsLookupswitch.java` | JVM bytecode performance |
+| `PolymorphicRefactoring.java` | Strategy Pattern as a conditional replacement |
 
-### 2. `switch` (Classic vs Modern)
-- **Classic** (`case X: break;`) → Works with `int`, `char`, `String`, `enum`.
-- **Modern** (Java 14+) → Arrow syntax `->`, no fall-through, returns values.
-- **Rule**: Use `switch` when you have 3+ discrete values. Use `if-else` for ranges.
+## 🧠 The Clean Code Philosophy
 
-### 3. Ternary Operator (`? :`)
-- **Rule**: Only use for **simple assignments**. Never nest ternaries.
-- **Rule**: If it spans more than 80 characters, use `if-else`.
+1. **Flatten your conditionals** – Deep nesting is a code smell.
+2. **Use Guard Clauses** – Handle edge cases first, then the happy path.
+3. **Prefer `switch` for 3+ discrete values** – It's more readable.
+4. **Use `if-else` for ranges** – Scores, ages, etc.
+5. **Avoid boolean parameters** – Use enums to make intent explicit.
+6. **Pattern matching** – Cleaner than `instanceof` + cast.
 
-### 4. Pattern Matching (Java 21+)
-- **Rule**: Use when checking types + extracting data in one go.
-- **Rule**: Prefer pattern matching over `instanceof` + cast.
-
-### 5. Boolean Blindness (Elite Concept)
-- **Rule**: Avoid `boolean` parameters that change behavior. Use enums instead.
-- **Example**: `calculatePrice(order, true)` → What does `true` mean? `calculatePrice(order, DiscountType.STUDENT)` is self-documenting.
-
-## 🧪 The Four Levels
-
-| Level      | Focus                                                                 |
-|------------|-----------------------------------------------------------------------|
-| **Beginner**  | Basic `if-else`, `switch` (classic), avoiding deep nesting.           |
-| **Intermediate** | Guard clauses, `switch` expressions, ternary operator.            |
-| **Advanced**   | Pattern matching, clean refactoring, enum-based conditionals.        |
-| **Elite/Senior** | Bytecode analysis, refactoring into polymorphism, boolean blindness. |
-
----
+## 🚀 How to Run
+```bash
+javac src/beginner/IfElseBasics.java
+java src.beginner.IfElseBasics
