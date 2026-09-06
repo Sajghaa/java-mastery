@@ -38,11 +38,11 @@ public class MethodBasics {
     }
 
     public static String getGrade(int score) {
-        // Guard: invalid input
+
         if (score < 0 || score > 100) {
             return "Invalid score";
         }
-        // Happy path
+   
         if (score >= 90) return "A";
         if (score >= 80) return "B";
         if (score >= 70) return "C";
