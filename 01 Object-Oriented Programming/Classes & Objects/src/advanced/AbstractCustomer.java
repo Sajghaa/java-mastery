@@ -5,7 +5,7 @@ import java.util.List;
 
 import beginner.Order;
 
-public class AbstractCustomer implements Discountable {
+public abstract class AbstractCustomer implements Discountable {
 
     protected  String name;
     protected int loyaltyPoints;
