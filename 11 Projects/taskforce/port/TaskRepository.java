@@ -1,6 +1,6 @@
 
-import taskforce.models.Task;
-import taskforce.models.User;
+import models.Task;
+import models.User;
 
 import java.util.List;
 import java.util.Optional;
